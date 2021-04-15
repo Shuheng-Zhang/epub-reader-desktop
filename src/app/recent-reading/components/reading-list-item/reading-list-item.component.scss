@@ -1,0 +1,106 @@
+.reading-list-item-wrapper {
+    width: 100%;
+    height: 240px;
+    margin: 8px 0;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    .reading-item-cover-wrapper {
+        width: 200px;
+        height: 100%;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .item-cover {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .reading-item-content-wrapper {
+        flex: 1;
+        height: 100%;
+        padding: 4px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        app-comms-divider {
+            width: 100%;
+        }
+        .reading-item-title-wrapper {
+            width: 100%;
+            height: 36px;
+            padding: 4px;
+            display: inline-flex;
+            align-items: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 20px;
+        }
+        .reading-item-author-wrapper {
+            width: 100%;
+            height: 32px;
+            padding: 4px;
+            display: inline-flex;
+            align-items: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 14px;
+            font-style: italic;
+        }
+        .reading-item-latest-time-wrapper {
+            width: 100%;
+            height: 30px;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+        .reading-item-process-info-wrapper {
+            width: 100%;
+            height: 36px;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            .reading-item-process-wrapper {
+                width: 52px;
+                height: 100%;
+                padding: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .point-split-wrapper {
+                width: 16px;
+                height: 100%;
+                padding: 4px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .reading-item-chapter-wrapper {
+                flex: 1;
+                height: 100%;
+                padding: 4px;
+                display: inline-flex;
+                align-items: center;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        .reading-item-operation-wrapper {
+            flex: 1;
+            width: 100%;
+            padding: 4px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.ebook-non-cover {
+    font-size: 128px;
+    color: #C6C6C6;
+}

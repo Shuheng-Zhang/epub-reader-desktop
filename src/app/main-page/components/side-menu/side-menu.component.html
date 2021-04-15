@@ -1,0 +1,8 @@
+<div class="side-menu-wrapper"  [ngStyle]="{width: menuWidth}">
+    <ul class="menu-wrapper" nz-menu nzMode="inline">
+        <li nz-menu-item [nzMatchRouter]="true"><a [routerLink]="['/', 'main', 'recent_reading']"><i nz-icon [nzType]="'read'"></i><span>Reading</span></a></li>
+        <li nz-menu-item [nzMatchRouter]="true"><a [routerLink]="['/', 'main', 'library']"><i nz-icon [nzType]="'book'"></i><span>Library</span></a></li>
+        <li nz-menu-item [nzMatchRouter]="true"><a [routerLink]="['/', 'main', 'bookmark']"><i nz-icon [nzType]="'tags'"></i><span>Bookmarks</span></a></li>
+        <li nz-menu-item [nzMatchRouter]="true"><a [routerLink]="['/', 'main', 'sys_preferences']"><i nz-icon [nzType]="'setting'"></i><span>Preferences</span></a></li>
+    </ul>
+</div>

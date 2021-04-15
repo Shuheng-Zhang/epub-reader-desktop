@@ -1,0 +1,19 @@
+<div class="reader-wrapper">
+    <div class="reader-ctrl-wrapper" (mouseover)="onToggleChapterCtrl($event)" (mouseout)="onToggleChapterCtrl($event)">
+        <div class="btn-ctrl" [hidden]="!isReaderCtrlShown" (click)="onChapterPrev()">
+            <i nz-icon nzType="left"></i>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="reader-content-mask" (click)="onToggleHeaderAndIndicator()"></div>
+        <div id="reader-content" class="reder-content-wrapper"></div>
+    </div>
+    
+    <div class="reader-ctrl-wrapper" (mouseover)="onToggleChapterCtrl($event)" (mouseout)="onToggleChapterCtrl($event)">
+        <div class="btn-ctrl" [hidden]="!isReaderCtrlShown" (click)="onChapterNext()">
+            <i nz-icon nzType="right"></i>
+        </div>
+    </div>
+</div>
+

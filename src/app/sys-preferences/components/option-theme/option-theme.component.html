@@ -1,0 +1,18 @@
+<div class="option-wrapper  cus-radius cus-border-shadow">
+    <div class="option-item-wrapper cus-horizontal">
+        <div class="item-title-wrapper">
+            Global Theme
+        </div>
+        <div class="item-control-wrapper">
+            <div class="control-left-wrapper">
+                <nz-select [(ngModel)]="themeOptionValue" (ngModelChange)="onThemeOptionChanged($event)">
+                    <nz-option *ngFor="let option of themeOptionList" [nzLabel]="option.label" [nzValue]="option.value"></nz-option>
+                  </nz-select>
+            </div>
+        </div>
+    </div>
+    <app-comms-divider></app-comms-divider>
+    <div class="option-item-wrapper cus-horizontal">
+        <div class="item-content-wrapper"> {{ themeOptionDescription }} </div>
+    </div>
+</div>

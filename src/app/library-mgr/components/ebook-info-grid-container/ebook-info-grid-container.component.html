@@ -1,0 +1,6 @@
+<div class="ebook-info-grid-container-wrapper">
+    <app-ebook-info-card [bookEntity]="item" *ngFor="let item of ebookList"></app-ebook-info-card>
+    <!-- <div class="ebook-info-grid-load-more-wrapper" *ngIf="!isLoadingDone">
+        <button nz-button nzType="primary" nzShape="round" nzBlock [nzSize]="'large'" (click)="onLoadingMore()"><i nz-icon nzType="loading"></i>Load More</button>
+    </div> -->
+</div>

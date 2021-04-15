@@ -1,0 +1,18 @@
+<div class="bookmark-list-item-wrapper cus-border-shadow" (click)="onBookmarkSelected()">
+    <div class="bookmark-icon-wrapper cus-side-right-shadow">
+        <i nz-icon [nzType]="'book'" [ngClass]="'bookmark-icon'"></i>
+    </div>
+    <div class="bookmark-content-wrapper">
+        <div class="bookmark-chapter-title-wrapper">
+            {{ bookmarkEntity.bookmarkTitle }}
+        </div>
+        <div class="bookmark-created-time-wrapper">
+            {{ bookmarkEntity.bookmarkCreatedTime }}
+        </div>
+        <app-comms-divider></app-comms-divider>
+
+        <div class="bookmark-overview-wrapper">
+            {{ bookmarkEntity.bookmarkLocationContent }}
+        </div>
+    </div>
+</div>

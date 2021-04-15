@@ -1,0 +1,32 @@
+<div class="reader-header-wrapper">
+    <div class="btn-back-wrapper cus-side-right-shadow">
+        <i class="btn-back" nz-icon nzType="rollback"></i>
+    </div>
+    <div class="ebook-title-wrapper cus-side-right-shadow">
+        <div class="ebook-title">
+            {{ ebookTitle }}
+        </div>
+    </div>
+
+    <div class="btn-controls-wrapper">
+        <div class="btn-control" nz-tooltip nzTooltipTitle="Contents" nzTooltipPlacement="bottom" (click)="onContentsPanelOpened()">
+            <i nz-icon nzType="unordered-list"></i>
+        </div>
+        <div class="btn-control" nz-tooltip nzTooltipTitle="Bookmarks" nzTooltipPlacement="bottom" (click)="onBookmarksPanelOpened()">
+            <i nz-icon nzType="book"></i>
+        </div>
+        <div class="btn-control" nz-tooltip nzTooltipTitle="Notes" nzTooltipPlacement="bottom" (click)="onNotesPanelOpened()">
+            <i nz-icon nzType="select"></i>
+        </div>
+        <div class="btn-control" nz-tooltip nzTooltipTitle="Font" nzTooltipPlacement="bottom" (click)="onFontPanelOpened()">
+            <i nz-icon nzType="font-size"></i>
+        </div>
+        <div class="btn-control" nz-tooltip nzTooltipTitle="Themes" nzTooltipPlacement="bottom" (click)="onThemesPanelOpened()">
+            <i nz-icon nzType="font-colors"></i>
+        </div>
+        <div class="btn-control" nz-tooltip nzTooltipTitle="Searching" nzTooltipPlacement="bottom" (click)="onSearchingPanelOpened()">
+            <i nz-icon nzType="file-search"></i>
+        </div>
+
+    </div>
+</div>

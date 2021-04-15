@@ -1,0 +1,19 @@
+
+<div class="option-wrapper cus-radius cus-border-shadow">
+    <div class="option-item-wrapper cus-horizontal">
+        <div class="item-title-wrapper">
+            Sync Strategy
+        </div>
+        <div class="item-control-wrapper">
+            <div class="control-left-wrapper">
+                <nz-select [(ngModel)]="syncOptionValue" (ngModelChange)="onSyncOptionChanged($event)">
+                    <nz-option *ngFor="let option of syncOptionList" [nzLabel]="option.label" [nzValue]="option.value"></nz-option>
+                  </nz-select>
+            </div>
+        </div>
+    </div>
+    <app-comms-divider></app-comms-divider>
+    <div class="option-item-wrapper cus-horizontal">
+        <div class="item-content-wrapper"> {{ syncOptionDescription }} </div>
+    </div>
+</div>

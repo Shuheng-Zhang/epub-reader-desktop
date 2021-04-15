@@ -1,0 +1,17 @@
+<div class="bookmark-mgr-wrapper">
+    <div class="header-wrapper">
+        <div class="title-wrapper">
+            <app-comms-title-header [headerTitle]="'Bookmarks'"></app-comms-title-header>
+            <app-placeholder-space></app-placeholder-space>
+            <app-comms-searching-bar [width]="'300px'"></app-comms-searching-bar>
+        </div>
+    </div>
+    <app-comms-divider></app-comms-divider>
+
+    <div class="content-wrapper">
+        <app-ebook-list-container></app-ebook-list-container>
+        <div class="bookmark-item-list-wrapper">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

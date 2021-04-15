@@ -1,0 +1,43 @@
+<div class="option-wrapper cus-radius cus-border-shadow">
+
+    <div class="option-item-wrapper .cus-vertical ">
+        <div class="item-title-wrapper">
+            Cache Location
+        </div>
+        <div class="item-control-wrapper">
+            <div class="control-left-wrapper">
+                <input nz-input readonly [(ngModel)]="cacheDirPath" />
+            </div>
+            <div class="control-right-wrapper">
+                <button type="button" nz-button nzType="primary" (click)="onDirectoryDialogOpened()">Browser</button>
+            </div>
+        </div>
+    </div>
+
+    <app-comms-divider></app-comms-divider>
+
+    <div class="option-item-wrapper cus-horizontal">
+        <div class="item-title-wrapper">
+            Free Space
+        </div>
+        <div class="item-control-wrapper">
+            <div class="control-right-wrapper">
+                {{ usableFreeSpace }}
+            </div>
+        </div>
+    </div>
+
+    <app-comms-divider></app-comms-divider>
+
+
+    <div class="option-item-wrapper cus-horizontal">
+        <div class="item-title-wrapper">
+            ePub Used Space
+        </div>
+        <div class="item-control-wrapper">
+            <div class="control-right-wrapper">
+                {{ epubUsedSpace }}
+            </div>
+        </div>
+    </div>
+</div>

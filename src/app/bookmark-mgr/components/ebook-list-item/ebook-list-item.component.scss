@@ -1,0 +1,64 @@
+.ebook-list-item-wrapper {
+    width: 280px;
+    height: 64px;
+    padding: 4px;
+    margin: 8px 8px 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        cursor: pointer;
+        border: 2px solid #5B8FF9;
+        padding: 0;
+    }
+    .ebook-cover-wrapper {
+        width: 48px;
+        height: 100%;
+        padding: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .ebook-cover {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .ebook-overview-info-wrapper {
+        flex: 1;
+        height: 100%;
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+        
+        .ebook-title-wrapper {
+            width: 100%;
+            height: 32px;
+            padding: 2px;
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 14px;
+            font-weight: 400;;
+        }
+        .ebook-authors-wrapper {
+            width: 100%;
+            height: 26px;
+            padding: 2px;
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 12px;
+            font-style: italic;
+        }
+    }
+}
+.ebook-non-cover {
+    font-size: 36px;
+    color: #C6C6C6;
+}
+.book-selected {
+    border: none;
+    outline: 2px solid #5B8FF9;
+    background-color: rgba(120, 211, 248, .25);
+    padding: 0;
+}

@@ -1,0 +1,15 @@
+<div class="ebook-list-item-wrapper cus-border-shadow"
+    [routerLink]="['/main/bookmark', 'book', ebookEntity.id]"
+    [routerLinkActive]="'book-selected'" 
+    [tabindex]="ebookItemTabIndex" 
+    (click)="onBookSelected()">
+    <div class="ebook-cover-wrapper cus-side-right-shadow">
+        <img class="ebook-cover" *ngIf="hasBookCover" [src]="ebookCover" />
+        <i nz-icon *ngIf="!hasBookCover" [nzType]="'read'" [ngClass]="'ebook-non-cover'"></i>
+    </div>
+    
+    <div class="ebook-overview-info-wrapper">
+        <div class="ebook-title-wrapper"> {{ ebookTitle }} </div>
+        <div class="ebook-authors-wrapper"> {{ ebookAuthors }} </div>
+    </div>
+</div>

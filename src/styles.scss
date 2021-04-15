@@ -1,0 +1,115 @@
+/*
+ * 全局样式配置
+*/
+
+/* 全局样式重设
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html, body {
+  width: 100%;
+	height: 100%;
+	user-select: none; // 禁止用户长按操作
+	overflow: hidden;
+	font-family: 'PingFangSC-Light', 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', 'Arial', 'sans-serif';
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); // 解决微信中点击时页面闪烁的问题
+}
+
+
+/* 全局路由样式配置 */
+.router-link-active {
+	text-decoration: none;
+}
+
+
+/* 全局滑动条样式配置 */
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #CED4DE; 
+    border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background-color: #5B8FF9;
+    border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background-color: #78D3F8;
+}
+
+
+/* 自定义圆角 */
+.cus-radius {
+	border-radius: 10px;
+}
+/* 自定义边框四边阴影 */
+.cus-border-shadow {
+	box-shadow: #C6C6C6 0px 0px 10px;
+}
+
+.cus-side-right-shadow {
+	border-right: 1px solid #E2E2E2;
+}
+
+/* 自定义水平 */
+.cus-horizontal {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+/* 自定义垂直 */
+.cus-vertical {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}

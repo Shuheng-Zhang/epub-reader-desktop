@@ -1,0 +1,21 @@
+<div class="reader-progress-indicator-wrapper">
+    <div class="current-chapter-wrapper">
+        <div class="chapter-title">
+            {{ currentChapterTitle }}
+        </div>
+    </div>
+    <div class="progressbar-control-wrapper">
+        <div class="indicator-btn-prev-wrapper">
+            <i nz-icon nzType="left"></i>
+        </div>
+        <nz-slider
+          [(ngModel)]="readingProgress" 
+          [nzMin]="0"
+          [nzMax]="100"
+          [nzStep]=".01"
+          [nzTipFormatter]="fnFormatProgressBarTooltip"></nz-slider>
+          <div class="indicator-btn-next-wrapper">
+            <i nz-icon nzType="right"></i>
+        </div>
+    </div>
+</div>
