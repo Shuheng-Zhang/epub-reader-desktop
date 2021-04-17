@@ -33,21 +33,4 @@ export class GeneralBookService {
       });
     return result;
   }
-
-  /**
-   * 获取单一电子书信息
-   * @param bookId 电子书ID
-   */
-  fetchOneBook(bookId: string) {
-    const result = new Subject<CommResDataDto<GeneralBook>>();
-    let params: ReqParamsDto<string> = {
-      'bookId': bookId
-    }
-    this.httpClient.post<CommResDataDto<GeneralBook>>(`${AppConfig.apiUrl}/book/findOne`, params)
-      .subscribe(res => {
-        console.log('fetchOneBook', res);
-        result.next(res);
-      })
-    return result;
-  }
 }
