@@ -6,7 +6,6 @@ import {CommResDataDto} from "../../core/dto";
 import {GeneralBook} from "../../core/entity";
 import {Subject} from "rxjs";
 import {PageQueryResultDto} from "../../core/dto/page-query-result.dto";
-import {ReqParamsDto} from "../../core/dto/req-params.dto";
 
 @Injectable({
   providedIn: "root"

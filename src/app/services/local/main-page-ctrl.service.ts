@@ -1,25 +1,13 @@
 import {Injectable} from "@angular/core";
+import {BehaviorSubject} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class MainPageCtrlService {
+
   /**
-   * 主页面状态
-   * @private
+   * 主页首次加载状态
    */
-  private state = {
-    /**
-     * 页面首次加载
-     */
-    isFirstTimeLoaded: true
-  }
-
-  getState(key: string) {
-    return this.state[key];
-  }
-
-  setState(key: string, value: any) {
-    this.state[key] = value;
-  }
+  isFirstTimeLoaded = new BehaviorSubject<boolean>(true);
 }

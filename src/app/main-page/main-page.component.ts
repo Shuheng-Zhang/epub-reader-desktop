@@ -1,26 +1,33 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {MainPageCtrlService} from "../services/local/main-page-ctrl.service";
+import {MainPageCtrlService} from "../services/local";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss']
 })
-export class MainPageComponent implements OnInit {
+export class MainPageComponent implements OnInit, OnDestroy {
+
+  firstTimeLoadedSub: Subscription;
 
   constructor(private navRouter: Router, private mainPageCtrlService: MainPageCtrlService) {
   }
 
   ngOnInit(): void {
 
-    const isFirstTimeLoaded = this.mainPageCtrlService.getState('isFirstTimeLoaded');
-    // 指定进入主页时起始页面为 '最近阅读' 页面
-    if (isFirstTimeLoaded) {
-      this.mainPageCtrlService.setState('isFirstTimeLoaded', false);
-      this.navRouter.navigateByUrl('/main/recent_reading');
-    }
-    // this.navRouter.navigateByUrl('/main/library');
+    // 获取主页加载状态
+    // 首页加载过后不再重新定位到默认页面
+    this.firstTimeLoadedSub = this.mainPageCtrlService.isFirstTimeLoaded.subscribe(loadState => {
+      if (loadState) {
+        this.navRouter.navigateByUrl('/main/recent_reading')
+          .then(() => this.mainPageCtrlService.isFirstTimeLoaded.next(false));
+      }
+    });
   }
 
+  ngOnDestroy(): void {
+    this.firstTimeLoadedSub.unsubscribe();
+  }
 }
