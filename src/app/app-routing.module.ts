@@ -6,7 +6,7 @@ import { PageNotFoundComponent } from './shared/components';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'epub_reader',
+    redirectTo: 'main',
     pathMatch: 'full'
   },
   {
