@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { EpubReaderComponent } from './epub-reader.component';
+import {EpubReaderComponent} from './epub-reader.component';
 
 describe('EpubReaderComponent', () => {
   let component: EpubReaderComponent;
@@ -8,9 +8,9 @@ describe('EpubReaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EpubReaderComponent ]
+      declarations: [EpubReaderComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

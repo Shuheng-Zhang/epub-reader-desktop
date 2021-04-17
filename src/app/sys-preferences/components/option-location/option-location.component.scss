@@ -1,48 +1,54 @@
 .option-wrapper {
+  width: 100%;
+  margin-top: 16px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+
+  .option-item-wrapper {
     width: 100%;
-    margin-top: 16px;
-    padding: 4px;
-    display: flex;
-    flex-direction: column;
-    .option-item-wrapper {
-        width: 100%;
-        max-height: 64px;
-        margin-top: 4px;
-        margin-bottom: 6px;
-        padding: 0 4px;
-        .item-title-wrapper {
-            width: 300px;
-            margin-right: 6px;
-            font-size: 16px;
-        }
-        .item-control-wrapper {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 36px;
-            .control-left-wrapper {
-                width: 100%;
-                margin-right: 6px;
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                nz-select {
-                    width: 300px;
-                }
-            }
-            
-        }
-        .item-content-wrapper {
-            width: 100%;
-            padding: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-            font-size: 14px;
-            font-style: italic;
-            
-        }
+    max-height: 64px;
+    margin-top: 4px;
+    margin-bottom: 6px;
+    padding: 0 4px;
+
+    .item-title-wrapper {
+      width: 300px;
+      margin-right: 6px;
+      font-size: 16px;
     }
+
+    .item-control-wrapper {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+
+      .control-left-wrapper {
+        width: 100%;
+        margin-right: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        nz-select {
+          width: 300px;
+        }
+      }
+
+    }
+
+    .item-content-wrapper {
+      width: 100%;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      font-size: 14px;
+      font-style: italic;
+
+    }
+  }
 }

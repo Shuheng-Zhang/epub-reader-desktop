@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { PlaceholderSpaceComponent } from './placeholder-space.component';
+import {PlaceholderSpaceComponent} from './placeholder-space.component';
 
 describe('PlaceholderSpaceComponent', () => {
   let component: PlaceholderSpaceComponent;
@@ -8,9 +8,9 @@ describe('PlaceholderSpaceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PlaceholderSpaceComponent ]
+      declarations: [PlaceholderSpaceComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

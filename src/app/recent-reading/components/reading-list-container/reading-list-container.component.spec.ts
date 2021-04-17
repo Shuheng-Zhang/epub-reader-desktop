@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ReadingListContainerComponent } from './reading-list-container.component';
+import {ReadingListContainerComponent} from './reading-list-container.component';
 
 describe('ReadingListContainerComponent', () => {
   let component: ReadingListContainerComponent;
@@ -8,9 +8,9 @@ describe('ReadingListContainerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ReadingListContainerComponent ]
+      declarations: [ReadingListContainerComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

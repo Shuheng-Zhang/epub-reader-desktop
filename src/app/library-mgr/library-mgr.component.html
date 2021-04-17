@@ -1,16 +1,16 @@
 <div class="library-mgr-wrapper">
 
-    <div class="header-wrapper">
-        <div class="title-wrapper">
-            <app-comms-title-header [headerTitle]="'All Books'"></app-comms-title-header>
-            <app-placeholder-space></app-placeholder-space>
-            <app-comms-searching-bar [width]="'300px'"></app-comms-searching-bar>
-        </div>
+  <div class="header-wrapper">
+    <div class="title-wrapper">
+      <app-comms-title-header [headerTitle]="'All Books'"></app-comms-title-header>
+      <app-placeholder-space></app-placeholder-space>
+      <app-comms-searching-bar [width]="'300px'"></app-comms-searching-bar>
     </div>
-    <app-comms-divider></app-comms-divider>
+  </div>
+  <app-comms-divider></app-comms-divider>
 
-    <app-ebook-info-grid-container [ebookList]="ebookList" [isLoadingDone]="ebookLoadingDone"></app-ebook-info-grid-container>
+  <app-ebook-info-grid-container [ebookList]="ebookList"></app-ebook-info-grid-container>
 
-    <!-- <app-placeholder-space></app-placeholder-space> -->
+  <!-- <app-placeholder-space></app-placeholder-space> -->
 
 </div>

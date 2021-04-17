@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ReaderBookmarkListItemComponent } from './reader-bookmark-list-item.component';
+import {ReaderBookmarkListItemComponent} from './reader-bookmark-list-item.component';
 
 describe('ReaderBookmarkListItemComponent', () => {
   let component: ReaderBookmarkListItemComponent;
@@ -8,9 +8,9 @@ describe('ReaderBookmarkListItemComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ReaderBookmarkListItemComponent ]
+      declarations: [ReaderBookmarkListItemComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

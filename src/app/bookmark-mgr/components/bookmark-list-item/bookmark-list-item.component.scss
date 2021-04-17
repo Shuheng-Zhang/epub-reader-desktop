@@ -1,59 +1,65 @@
 .bookmark-list-item-wrapper {
-    width: 100%;
-    height: 180px;
-    margin: 8px 0;
+  width: 100%;
+  height: 180px;
+  margin: 8px 0;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+    border: 2px solid #5B8FF9;
+    padding: 0;
+  }
+
+  .bookmark-icon-wrapper {
+    width: 80px;
+    height: 100%;
     padding: 4px;
     display: flex;
     align-items: center;
-    &:hover {
-        cursor: pointer;
-        border: 2px solid #5B8FF9;
-        padding: 0;
+    justify-content: center;
+  }
+
+  .bookmark-content-wrapper {
+    flex: 1;
+    height: 100%;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+
+    .bookmark-chapter-title-wrapper {
+      width: 100%;
+      height: 36px;
+      padding: 2px;
+      font-size: 18px;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-    .bookmark-icon-wrapper {
-        width: 80px;
-        height: 100%;
-        padding: 4px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+
+    .bookmark-created-time-wrapper {
+      width: 100%;
+      height: 24px;
+      padding: 2px;
+      font-size: 12px;
+      font-style: italic;
     }
-    .bookmark-content-wrapper {
-        flex: 1;
-        height: 100%;
-        padding: 4px;
-        display: flex;
-        flex-direction: column;
-        .bookmark-chapter-title-wrapper {
-            width: 100%;
-            height: 36px;
-            padding: 2px;
-            font-size: 18px;
-            display: inline-block;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .bookmark-created-time-wrapper {
-            width: 100%;
-            height: 24px;
-            padding: 2px;
-            font-size: 12px;
-            font-style: italic;
-        }
-        .bookmark-overview-wrapper {
-            width: 100%;
-            flex: 1;
-            padding: 2px;
-            font-size: 16px;
-            display: inline-block;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+
+    .bookmark-overview-wrapper {
+      width: 100%;
+      flex: 1;
+      padding: 2px;
+      font-size: 16px;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-    
+  }
+
 }
 
 .bookmark-icon {
-    font-size: 56px;
-    color: #C6C6C6;
+  font-size: 56px;
+  color: #C6C6C6;
 }

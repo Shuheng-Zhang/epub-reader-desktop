@@ -1,6 +1,5 @@
-import { LangOptionDescription } from './../../../enums/lang-option-description.enum';
-import { LangOption } from './../../../enums/lang-option.enum';
-import { Component, OnInit } from '@angular/core';
+import {LangOption, LangOptionDescription} from '../../../core/enums';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-option-location',
@@ -12,11 +11,12 @@ export class OptionLocationComponent implements OnInit {
   langOptionValue: LangOption;
   langOptionDescription: string;
   langOptionList: Array<{ label: string, value: LangOption }> = [
-    { label: 'English (US)', value: LangOption.LANG_EN },
-    { label: '汉语 (中国)', value: LangOption.LANG_CN }
+    {label: 'English (US)', value: LangOption.LANG_EN},
+    {label: '汉语 (中国)', value: LangOption.LANG_CN}
   ]
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
     this.langOptionValue = LangOption.LANG_EN;

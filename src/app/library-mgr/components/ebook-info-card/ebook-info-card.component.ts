@@ -1,6 +1,8 @@
-import { GeneralBook } from './../../../entity/general-ebook.entity';
-import { Component, Input, OnInit } from '@angular/core';
-import { AppConfig } from '../../../../environments/environment';
+import {GeneralBook} from '../../../core/entity';
+import {Component, Input, OnInit} from '@angular/core';
+import {AppConfig} from '../../../../environments/environment';
+import {Router} from "@angular/router";
+import {ReaderCtrlService} from "../../../services/local";
 
 
 @Component({
@@ -13,14 +15,14 @@ export class EbookInfoCardComponent implements OnInit {
   @Input() bookEntity: GeneralBook;
 
   ebookCoverUrl: string = null;
-  ebookFileUrl: string = null;
   isCoverNull = false;
   isAddBookAction = false;
 
-  constructor() { }
+  constructor(private navRouter: Router, private readerCtrlService: ReaderCtrlService) {
+  }
 
   ngOnInit(): void {
-    
+
     if (this.bookEntity.id == null) {
       this.isAddBookAction = true;
       return;
@@ -29,18 +31,20 @@ export class EbookInfoCardComponent implements OnInit {
     if (this.bookEntity.bookCoverUrl == null || this.bookEntity.bookCoverUrl == '') {
       this.isCoverNull = true;
     } else {
-      this.ebookCoverUrl = `${AppConfig.baseUrl}${this.bookEntity.bookCoverUrl}`
+      this.ebookCoverUrl = `${AppConfig.baseUrl}${this.bookEntity.bookCoverUrl}`;
     }
-    this.ebookFileUrl = `${AppConfig.baseUrl}${this.bookEntity.bookFileUrl}`
   }
 
 
-  onBookOpened(bookFileUrl: string) {
-    if (bookFileUrl == null) {
+  onBookOpened(bookId: string) {
+    if (bookId == null) {
       console.log('Library Add Book Action Clicked');
       return;
     }
 
-    console.log(`book: ${bookFileUrl} Clicked.`)
+    console.log(`book: ${bookId} Clicked.`);
+    this.navRouter.navigate(['/', 'epub_reader']).then(() => {
+      this.readerCtrlService.currentBookInfo.next(this.bookEntity);
+    });
   }
 }

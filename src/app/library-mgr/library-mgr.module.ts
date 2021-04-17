@@ -1,11 +1,10 @@
-import { SharedModule } from './../shared/shared.module';
-import { LibraryMgrRouteModule } from './library-mgr-routing.module';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { LibraryMgrComponent } from './library-mgr.component';
-import { EbookInfoCardComponent } from './components/ebook-info-card/ebook-info-card.component';
-import { EbookInfoGridContainerComponent } from './components/ebook-info-grid-container/ebook-info-grid-container.component';
-
+import {SharedModule} from './../shared/shared.module';
+import {LibraryMgrRouteModule} from './library-mgr-routing.module';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {LibraryMgrComponent} from './library-mgr.component';
+import {EbookInfoCardComponent} from './components/ebook-info-card/ebook-info-card.component';
+import {EbookInfoGridContainerComponent} from './components/ebook-info-grid-container/ebook-info-grid-container.component';
 
 
 @NgModule({
@@ -16,4 +15,5 @@ import { EbookInfoGridContainerComponent } from './components/ebook-info-grid-co
     LibraryMgrRouteModule
   ]
 })
-export class LibraryMgrModule { }
+export class LibraryMgrModule {
+}

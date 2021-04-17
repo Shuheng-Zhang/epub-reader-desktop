@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { BookmarkMgrComponent } from './bookmark-mgr.component';
+import {BookmarkMgrComponent} from './bookmark-mgr.component';
 
 describe('BookmarkMgrComponent', () => {
   let component: BookmarkMgrComponent;
@@ -8,9 +8,9 @@ describe('BookmarkMgrComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BookmarkMgrComponent ]
+      declarations: [BookmarkMgrComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

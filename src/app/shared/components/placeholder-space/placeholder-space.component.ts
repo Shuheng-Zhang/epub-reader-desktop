@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-placeholder-space',
@@ -9,7 +9,8 @@ export class PlaceholderSpaceComponent implements OnInit {
 
   @Input() height = '100%';
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-comms-title-header',
@@ -12,7 +12,8 @@ export class CommsTitleHeaderComponent implements OnInit {
   @Input() headerTitle = 'Untitled'
   @Input() titleFontSize = '20px';
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

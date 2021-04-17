@@ -1,18 +1,19 @@
 <div class="option-wrapper  cus-radius cus-border-shadow">
-    <div class="option-item-wrapper cus-horizontal">
-        <div class="item-title-wrapper">
-            Language
-        </div>
-        <div class="item-control-wrapper">
-            <div class="control-left-wrapper">
-                <nz-select [(ngModel)]="langOptionValue" (ngModelChange)="onLangOptionChanged($event)">
-                    <nz-option *ngFor="let option of langOptionList" [nzLabel]="option.label" [nzValue]="option.value"></nz-option>
-                  </nz-select>
-            </div>
-        </div>
+  <div class="option-item-wrapper cus-horizontal">
+    <div class="item-title-wrapper">
+      Language
     </div>
-    <app-comms-divider></app-comms-divider>
-    <div class="option-item-wrapper cus-horizontal">
-        <div class="item-content-wrapper"> {{ langOptionDescription }} </div>
+    <div class="item-control-wrapper">
+      <div class="control-left-wrapper">
+        <nz-select [(ngModel)]="langOptionValue" (ngModelChange)="onLangOptionChanged($event)">
+          <nz-option *ngFor="let option of langOptionList" [nzLabel]="option.label"
+                     [nzValue]="option.value"></nz-option>
+        </nz-select>
+      </div>
     </div>
+  </div>
+  <app-comms-divider></app-comms-divider>
+  <div class="option-item-wrapper cus-horizontal">
+    <div class="item-content-wrapper"> {{ langOptionDescription }} </div>
+  </div>
 </div>

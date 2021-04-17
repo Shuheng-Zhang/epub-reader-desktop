@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { MenuModule } from 'primeng/menu';
+import {MenuModule} from 'primeng/menu';
 
 @NgModule({
   declarations: [],
@@ -13,4 +13,5 @@ import { MenuModule } from 'primeng/menu';
     MenuModule
   ]
 })
-export class PrimeNgModule { }
+export class PrimeNgModule {
+}

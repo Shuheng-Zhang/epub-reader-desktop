@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-option-caches',
@@ -22,7 +22,8 @@ export class OptionCachesComponent implements OnInit {
    */
   epubUsedSpace = '233.3 MB';
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

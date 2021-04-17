@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-comms-searching-bar',
@@ -15,7 +15,8 @@ export class CommsSearchingBarComponent implements OnInit {
 
   searchingInput = ''
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

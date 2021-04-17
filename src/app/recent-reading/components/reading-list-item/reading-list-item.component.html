@@ -1,34 +1,34 @@
 <div class="reading-list-item-wrapper cus-border-shadow">
-    <div class="reading-item-cover-wrapper cus-side-right-shadow">
-        <img class="item-cover" *ngIf="hasBookCover" [src]="ebookCover" />
-        <i nz-icon *ngIf="!hasBookCover" [nzType]="'read'" [ngClass]="'ebook-non-cover'"></i>
+  <div class="reading-item-cover-wrapper cus-side-right-shadow">
+    <img class="item-cover" *ngIf="hasBookCover" [src]="ebookCover"/>
+    <i nz-icon *ngIf="!hasBookCover" [nzType]="'read'" [ngClass]="'ebook-non-cover'"></i>
+  </div>
+  <div class="reading-item-content-wrapper">
+    <div class="reading-item-title-wrapper">
+      {{ readingBook.ebookTitle }}
     </div>
-    <div class="reading-item-content-wrapper">
-        <div class="reading-item-title-wrapper">
-            {{ readingBook.ebookTitle }}
-        </div>
-        <div class="reading-item-author-wrapper">
-            {{ readingBook.ebookAuthors }}
-        </div>
-        
-        <app-comms-divider></app-comms-divider>
-
-        <div class="reading-item-latest-time-wrapper">
-            {{ readingBook.readingLatestTime }}
-        </div>
-        <div class="reading-item-process-info-wrapper">
-            <div class="reading-item-process-wrapper">
-                {{ readingBook.readingProgress }}%
-            </div>
-            <div class="point-split-wrapper">·</div>
-            <div class="reading-item-chapter-wrapper">
-                {{ readingBook.readingChapterTitle }}
-            </div>
-        </div>
-
-
-        <div class="reading-item-operation-wrapper">
-            <button nz-button nzShape="round" nzType="primary" type="button">Continue</button>
-        </div>
+    <div class="reading-item-author-wrapper">
+      {{ readingBook.ebookAuthors }}
     </div>
+
+    <app-comms-divider></app-comms-divider>
+
+    <div class="reading-item-latest-time-wrapper">
+      {{ readingBook.readingLatestTime }}
+    </div>
+    <div class="reading-item-process-info-wrapper">
+      <div class="reading-item-process-wrapper">
+        {{ readingBook.readingProgress }}%
+      </div>
+      <div class="point-split-wrapper">·</div>
+      <div class="reading-item-chapter-wrapper">
+        {{ readingBook.readingChapterTitle }}
+      </div>
+    </div>
+
+
+    <div class="reading-item-operation-wrapper">
+      <button nz-button nzShape="round" nzType="primary" type="button">Continue</button>
+    </div>
+  </div>
 </div>

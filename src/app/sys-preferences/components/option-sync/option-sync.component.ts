@@ -1,6 +1,5 @@
-import { SyncOptionDescription } from './../../../enums/sync-option-description.enum';
-import { SyncOption } from './../../../enums/sync-option.enum';
-import { Component, OnInit } from '@angular/core';
+import {SyncOption, SyncOptionDescription} from '../../../core/enums';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-option-sync',
@@ -32,7 +31,8 @@ export class OptionSyncComponent implements OnInit {
     {label: 'Manually', value: SyncOption.SYNC_ON_MANUAL}
   ];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
     this.syncOptionValue = SyncOption.SYNC_ON_AUTO;

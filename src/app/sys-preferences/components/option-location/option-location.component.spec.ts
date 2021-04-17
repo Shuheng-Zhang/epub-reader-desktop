@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { OptionLocationComponent } from './option-location.component';
+import {OptionLocationComponent} from './option-location.component';
 
 describe('OptionLocationComponent', () => {
   let component: OptionLocationComponent;
@@ -8,9 +8,9 @@ describe('OptionLocationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OptionLocationComponent ]
+      declarations: [OptionLocationComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-side-avatar',
@@ -12,7 +12,8 @@ export class SideAvatarComponent implements OnInit {
 
   @Input() accountName = 'Hello World'
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

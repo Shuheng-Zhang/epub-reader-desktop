@@ -1,5 +1,5 @@
-import { ReadingBook } from './../../../entity/reading-ebook.entity';
-import { Component, OnInit } from '@angular/core';
+import {ReadingBook} from '../../../core/entity';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-reading-list-container',
@@ -10,7 +10,8 @@ export class ReadingListContainerComponent implements OnInit {
 
   readingBookList: Array<ReadingBook> = []
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
     this.readingBookList = [

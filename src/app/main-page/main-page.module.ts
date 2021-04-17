@@ -1,11 +1,10 @@
-import { SharedModule } from './../shared/shared.module';
-import { MainPageRouteModule } from './main-page-routing.module';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MainPageComponent } from './main-page.component';
-import { SideMenuComponent } from './components/side-menu/side-menu.component';
-import { SideAvatarComponent } from './components/side-avatar/side-avatar.component';
-
+import {SharedModule} from './../shared/shared.module';
+import {MainPageRouteModule} from './main-page-routing.module';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {MainPageComponent} from './main-page.component';
+import {SideMenuComponent} from './components/side-menu/side-menu.component';
+import {SideAvatarComponent} from './components/side-avatar/side-avatar.component';
 
 
 @NgModule({
@@ -16,4 +15,5 @@ import { SideAvatarComponent } from './components/side-avatar/side-avatar.compon
     MainPageRouteModule
   ]
 })
-export class MainPageModule { }
+export class MainPageModule {
+}

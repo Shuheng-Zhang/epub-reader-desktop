@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-bookmark-mgr',
@@ -9,7 +9,8 @@ export class BookmarkMgrComponent implements OnInit {
 
   isNoEbookSelected = false;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

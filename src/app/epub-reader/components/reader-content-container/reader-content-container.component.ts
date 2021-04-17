@@ -1,7 +1,8 @@
-import { ReaderCtrlService } from './../../../services/local/reader-ctrl.service';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import {ReaderCtrlService} from '../../../services/local';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Book, Rendition} from 'epubjs';
-import { AppConfig } from '../../../../environments/environment';
+import {AppConfig} from '../../../../environments/environment';
+import {Subscription} from "rxjs";
 
 
 @Component({
@@ -11,22 +12,26 @@ import { AppConfig } from '../../../../environments/environment';
 })
 export class ReaderContentContainerComponent implements OnInit, OnDestroy {
 
-  ebookFileUrl: string;
   ebook: Book;
   renderer: Rendition;
 
   isReaderCtrlShown = false;
   isHeaderAndIndicatorShown = false;
 
-  constructor(private readerCtrlService: ReaderCtrlService) { }
+  private ebookInfoSub: Subscription;
+
+  constructor(private readerCtrlService: ReaderCtrlService) {
+  }
 
   ngOnInit(): void {
-
-    this.onLoadingBook(`${AppConfig.baseUrl}/10000/df1025ce6785481897d3ca7c5c0f25bd.epub`);
+    this.ebookInfoSub = this.readerCtrlService.currentBookInfo.subscribe(ebookInfo => {
+      const ebookFilePath = `${AppConfig.baseUrl}${ebookInfo.bookFileUrl}`;
+      this.onLoadingBook(ebookFilePath);
+    });
   }
 
   ngOnDestroy(): void {
-
+    this.ebookInfoSub.unsubscribe();
   }
 
   /**
@@ -36,7 +41,7 @@ export class ReaderContentContainerComponent implements OnInit, OnDestroy {
   onToggleChapterCtrl(event: MouseEvent) {
     this.isReaderCtrlShown = !this.isReaderCtrlShown;
   }
-  
+
   /**
    * 显示/隐藏顶栏和进度指示器
    */
@@ -50,6 +55,7 @@ export class ReaderContentContainerComponent implements OnInit, OnDestroy {
       this.renderer.prev();
     }
   }
+
   onChapterNext() {
     if (this.renderer && this.isReaderCtrlShown) {
       this.renderer.next();

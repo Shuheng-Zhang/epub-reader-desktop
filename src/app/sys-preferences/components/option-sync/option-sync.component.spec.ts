@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { OptionSyncComponent } from './option-sync.component';
+import {OptionSyncComponent} from './option-sync.component';
 
 describe('OptionSyncComponent', () => {
   let component: OptionSyncComponent;
@@ -8,9 +8,9 @@ describe('OptionSyncComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OptionSyncComponent ]
+      declarations: [OptionSyncComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

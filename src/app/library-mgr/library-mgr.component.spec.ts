@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { LibraryMgrComponent } from './library-mgr.component';
+import {LibraryMgrComponent} from './library-mgr.component';
 
 describe('LibraryMgrComponent', () => {
   let component: LibraryMgrComponent;
@@ -8,9 +8,9 @@ describe('LibraryMgrComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LibraryMgrComponent ]
+      declarations: [LibraryMgrComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SysPreferencesComponent } from './sys-preferences.component';
+import {SysPreferencesComponent} from './sys-preferences.component';
 
 describe('SysPreferencesComponent', () => {
   let component: SysPreferencesComponent;
@@ -8,9 +8,9 @@ describe('SysPreferencesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SysPreferencesComponent ]
+      declarations: [SysPreferencesComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

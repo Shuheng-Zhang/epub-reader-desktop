@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { CommsDividerComponent } from './comms-divider.component';
+import {CommsDividerComponent} from './comms-divider.component';
 
 describe('CommsDividerComponent', () => {
   let component: CommsDividerComponent;
@@ -8,9 +8,9 @@ describe('CommsDividerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CommsDividerComponent ]
+      declarations: [CommsDividerComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

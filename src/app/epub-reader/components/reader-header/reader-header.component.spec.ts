@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ReaderHeaderComponent } from './reader-header.component';
+import {ReaderHeaderComponent} from './reader-header.component';
 
 describe('ReaderHeaderComponent', () => {
   let component: ReaderHeaderComponent;
@@ -8,9 +8,9 @@ describe('ReaderHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ReaderHeaderComponent ]
+      declarations: [ReaderHeaderComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

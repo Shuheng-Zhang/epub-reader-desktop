@@ -1,7 +1,7 @@
-import { ReadingBook } from './../../../entity/reading-ebook.entity';
-import { AppConfig } from '../../../../environments/environment';
+import {ReadingBook} from '../../../core/entity';
+import {AppConfig} from '../../../../environments/environment';
 
-import { Component, Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-reading-list-item',
@@ -14,8 +14,9 @@ export class ReadingListItemComponent implements OnInit {
 
   ebookCover: string;
   hasBookCover = true;
-  
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
     this.checkBookCover();
@@ -24,14 +25,13 @@ export class ReadingListItemComponent implements OnInit {
     }
   }
 
-    /**
+  /**
    * 检查电子书对象封面
    */
-     private checkBookCover(): void {
-      if (this.readingBook.ebookCoverUrl == '' 
-          || this.readingBook.ebookCoverUrl == null 
-          || this.readingBook.ebookCoverUrl == undefined) {
-        this.hasBookCover = false;
-      }
+  private checkBookCover(): void {
+    if (this.readingBook.ebookCoverUrl == ''
+      || this.readingBook.ebookCoverUrl == null) {
+      this.hasBookCover = false;
     }
+  }
 }

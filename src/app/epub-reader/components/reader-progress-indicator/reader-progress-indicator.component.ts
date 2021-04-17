@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-reader-progress-indicator',
@@ -10,7 +10,8 @@ export class ReaderProgressIndicatorComponent implements OnInit {
   currentChapterTitle = 'Indexing...';
   readingProgress: number;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

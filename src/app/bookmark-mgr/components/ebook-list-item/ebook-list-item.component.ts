@@ -1,6 +1,6 @@
-import { GeneralBook } from './../../../entity/general-ebook.entity';
-import { Component, Input, OnInit } from '@angular/core';
-import { AppConfig } from '../../../../environments/environment';
+import {GeneralBook} from '../../../core/entity';
+import {Component, Input, OnInit} from '@angular/core';
+import {AppConfig} from '../../../../environments/environment';
 
 @Component({
   selector: 'app-ebook-list-item',
@@ -8,7 +8,7 @@ import { AppConfig } from '../../../../environments/environment';
   styleUrls: ['./ebook-list-item.component.scss']
 })
 export class EbookListItemComponent implements OnInit {
-  
+
   @Input() ebookEntity: GeneralBook;
   @Input() ebookItemTabIndex: number;
   ebookCover: string;
@@ -17,7 +17,8 @@ export class EbookListItemComponent implements OnInit {
 
   hasBookCover = true;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
     this.checkBookCover();
@@ -36,9 +37,8 @@ export class EbookListItemComponent implements OnInit {
    * 检查电子书对象封面
    */
   private checkBookCover(): void {
-    if (this.ebookEntity.bookCoverUrl == '' 
-        || this.ebookEntity.bookCoverUrl == null 
-        || this.ebookEntity.bookCoverUrl == undefined) {
+    if (this.ebookEntity.bookCoverUrl == ''
+      || this.ebookEntity.bookCoverUrl == null) {
       this.hasBookCover = false;
     }
   }

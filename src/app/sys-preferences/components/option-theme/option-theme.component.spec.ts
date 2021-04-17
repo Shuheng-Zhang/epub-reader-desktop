@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { OptionThemeComponent } from './option-theme.component';
+import {OptionThemeComponent} from './option-theme.component';
 
 describe('OptionThemeComponent', () => {
   let component: OptionThemeComponent;
@@ -8,9 +8,9 @@ describe('OptionThemeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OptionThemeComponent ]
+      declarations: [OptionThemeComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

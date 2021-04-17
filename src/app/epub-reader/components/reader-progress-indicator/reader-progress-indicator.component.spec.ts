@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ReaderProgressIndicatorComponent } from './reader-progress-indicator.component';
+import {ReaderProgressIndicatorComponent} from './reader-progress-indicator.component';
 
 describe('ReaderProgressIndicatorComponent', () => {
   let component: ReaderProgressIndicatorComponent;
@@ -8,9 +8,9 @@ describe('ReaderProgressIndicatorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ReaderProgressIndicatorComponent ]
+      declarations: [ReaderProgressIndicatorComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

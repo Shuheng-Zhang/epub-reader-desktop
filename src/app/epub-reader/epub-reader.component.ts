@@ -1,6 +1,6 @@
-import { ReaderCtrlService } from './../services/local/reader-ctrl.service';
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import {ReaderCtrlService} from '../services/local';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-epub-reader',
@@ -8,23 +8,21 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./epub-reader.component.scss']
 })
 export class EpubReaderComponent implements OnInit, OnDestroy {
+  private readerHeaderAndIndicatorCtrlSub: Subscription;
 
-  private readerCtrlSub: Subscription;
   isHeaderAndIndicatorShown = false;
 
-  constructor(private readerCtrlService: ReaderCtrlService) { }
+  constructor(private readerCtrlService: ReaderCtrlService) {
+  }
 
   ngOnInit(): void {
-    this.readerCtrlSub = this.readerCtrlService.toggleHeaderAndIndicator.subscribe(state => {
+    this.readerHeaderAndIndicatorCtrlSub = this.readerCtrlService.toggleHeaderAndIndicator.subscribe(state => {
       this.isHeaderAndIndicatorShown = state;
     });
   }
 
   ngOnDestroy(): void {
-    this.readerCtrlSub.unsubscribe();
+    this.readerHeaderAndIndicatorCtrlSub.unsubscribe();
   }
 
-  // toggleHeaderAndIndicator() {
-  //   this.isHeaderAndIndicatorShown = !this.isHeaderAndIndicatorShown;
-  // }
 }

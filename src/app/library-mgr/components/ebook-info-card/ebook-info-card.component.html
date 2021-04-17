@@ -1,57 +1,57 @@
 <div class="ebook-info-card-wrapper">
-    <div class="ebook-cover-wrapper cus-border-shadow" (click)="onBookOpened(bookEntity.bookFileUrl)"
-        nz-popover 
-        [nzPopoverTitle]="!isAddBookAction ? titleTemplate : null"
-        [nzPopoverContent]="!isAddBookAction ? contentTemplate : null"
-        [ngClass]="isAddBookAction ? 'ebook-adding-action' : null">
-        
-        <!-- 电子书封面 -->
-        <img class="ebook-cover" [src]="ebookCoverUrl" *ngIf="!isCoverNull && !isAddBookAction" />
-        
-        <!-- 新增电子书 功能按键 -->
-        <div class="ebook-cover" *ngIf="isAddBookAction">
-            <i nz-icon [nzType]="'plus-circle'" [ngClass]="'ebook-adding-icon'"></i>
-            <div class="ebook-adding-action-text"> Adding Book(s) </div>
-        </div>
+  <div class="ebook-cover-wrapper cus-border-shadow" (click)="onBookOpened(bookEntity.id)"
+       nz-popover
+       [nzPopoverTitle]="!isAddBookAction ? titleTemplate : null"
+       [nzPopoverContent]="!isAddBookAction ? contentTemplate : null"
+       [ngClass]="isAddBookAction ? 'ebook-adding-action' : null">
 
-        <!-- 默认封面 -->
-        <div class="ebook-cover" *ngIf="isCoverNull">
-            <i nz-icon [nzType]="'read'" [ngClass]="'ebook-non-cover'"></i>
-        </div>
+    <!-- 电子书封面 -->
+    <img class="ebook-cover" [src]="ebookCoverUrl" *ngIf="!isCoverNull && !isAddBookAction"/>
+
+    <!-- 新增电子书 功能按键 -->
+    <div class="ebook-cover" *ngIf="isAddBookAction">
+      <i nz-icon [nzType]="'plus-circle'" [ngClass]="'ebook-adding-icon'"></i>
+      <div class="ebook-adding-action-text"> Adding Book(s)</div>
     </div>
-    <div class="ebook-info-wrapper">
-        <div class="ebook-title-wrapper">
-            <span class="ebook-title">{{ bookEntity.bookTitle }}</span>
-        </div>
-        <div class="ebook-author-wrapper">
-            <span class="ebook-authors">{{ bookEntity.bookAuthors }}</span>
-        </div>
+
+    <!-- 默认封面 -->
+    <div class="ebook-cover" *ngIf="isCoverNull">
+      <i nz-icon [nzType]="'read'" [ngClass]="'ebook-non-cover'"></i>
     </div>
+  </div>
+  <div class="ebook-info-wrapper">
+    <div class="ebook-title-wrapper">
+      <span class="ebook-title">{{ bookEntity.bookTitle }}</span>
+    </div>
+    <div class="ebook-author-wrapper">
+      <span class="ebook-authors">{{ bookEntity.bookAuthors }}</span>
+    </div>
+  </div>
 </div>
 
 <ng-template #titleTemplate><i nz-icon nzType="info-circle"></i> Info</ng-template>
 <ng-template #contentTemplate>
-    <div class="ebook-info-detail-wrapper">
-        <div class="ebook-info-detail-title-wrapper">
-            <span class="info-title">Title: </span>
-            <span> {{ bookEntity.bookTitle }} </span>
-        </div>
-        <div class="ebook-info-detail-authors-wrapper">
-            <span class="info-title">Authors: </span>
-            <span> {{ bookEntity.bookAuthors }} </span>
-        </div>
-        <div class="ebook-info-detail-size-wrapper">
-            <span class="info-title">Size: </span>
-            <span> {{ bookEntity.bookSize }} </span>
-        </div>
-        <div class="ebook-info-detail-pushed-time-wrapper">
-            <span class="info-title">PushedTime: </span>
-            <span>{{ bookEntity.bookPushedTime}}</span>
-        </div>
-        <div class="ebook-detail-descrpiton-wrapper">
-            <span class="info-title">Discription: </span>
-            <span> {{ bookEntity.bookDescription }}</span>
-        </div>
+  <div class="ebook-info-detail-wrapper">
+    <div class="ebook-info-detail-title-wrapper">
+      <span class="info-title">Title: </span>
+      <span> {{ bookEntity.bookTitle }} </span>
     </div>
+    <div class="ebook-info-detail-authors-wrapper">
+      <span class="info-title">Authors: </span>
+      <span> {{ bookEntity.bookAuthors }} </span>
+    </div>
+    <div class="ebook-info-detail-size-wrapper">
+      <span class="info-title">Size: </span>
+      <span> {{ bookEntity.bookSize }} </span>
+    </div>
+    <div class="ebook-info-detail-pushed-time-wrapper">
+      <span class="info-title">PushedTime: </span>
+      <span>{{ bookEntity.bookPushedTime}}</span>
+    </div>
+    <div class="ebook-detail-descrpiton-wrapper">
+      <span class="info-title">Discription: </span>
+      <span> {{ bookEntity.bookDescription }}</span>
+    </div>
+  </div>
 
 </ng-template>

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { ReaderContentContainerComponent } from './reader-content-container.component';
+import {ReaderContentContainerComponent} from './reader-content-container.component';
 
 describe('ReaderContentContainerComponent', () => {
   let component: ReaderContentContainerComponent;
@@ -8,9 +8,9 @@ describe('ReaderContentContainerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ReaderContentContainerComponent ]
+      declarations: [ReaderContentContainerComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

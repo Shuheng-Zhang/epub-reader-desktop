@@ -1,5 +1,5 @@
-import { GeneralBook } from './../../../entity/general-ebook.entity';
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import {GeneralBook} from '../../../core/entity';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-ebook-info-grid-container',
@@ -8,9 +8,9 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 })
 export class EbookInfoGridContainerComponent implements OnInit {
   @Input() ebookList: GeneralBook[]
-  @Input() isLoadingDone = false;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

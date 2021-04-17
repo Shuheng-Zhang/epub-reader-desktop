@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { OptionCachesComponent } from './option-caches.component';
+import {OptionCachesComponent} from './option-caches.component';
 
 describe('OptionCachesComponent', () => {
   let component: OptionCachesComponent;
@@ -8,9 +8,9 @@ describe('OptionCachesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ OptionCachesComponent ]
+      declarations: [OptionCachesComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

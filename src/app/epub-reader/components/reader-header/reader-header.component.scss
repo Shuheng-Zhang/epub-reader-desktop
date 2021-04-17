@@ -1,66 +1,74 @@
 .reader-header-wrapper {
-    width: 100%;
-    height: 64px;
+  width: 100%;
+  height: 64px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px #E2E2E2;
+
+  .btn-back-wrapper {
+    width: 64px;
+    height: 100%;
     padding: 4px;
     display: flex;
     align-items: center;
-    background-color: #fff;
-    box-shadow: 0 2px 4px #E2E2E2;
-    .btn-back-wrapper {
-        width: 64px;
-        height: 100%;
-        padding: 4px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #5B8FF9;
-        &:hover {
-            font-size: 28px;
-            color: #7262fd;
-            cursor: pointer;
-            padding: 0;
-        }
-        .btn-back {
-            font-size: 24px;
-        }
+    justify-content: center;
+    color: #5B8FF9;
+
+    &:hover {
+      font-size: 28px;
+      color: #7262fd;
+      cursor: pointer;
+      padding: 0;
     }
-    .ebook-title-wrapper {
-        width: 65%;
-        height: 100%;
-        padding: 4px 4px 4px 8px;
-        display: flex;
-        align-items: center;
-        .ebook-title {
-            display: inline-block;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            font-size: 20px;
-        }
+
+    .btn-back {
+      font-size: 24px;
     }
-    .btn-controls-wrapper {
-        flex: 1;
-        height: 100%;
-        padding: 4px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        .btn-control {
-            width: 64px;
-            height: 64px;
-            padding: 4px;
-            margin: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            color: #5B8FF9;
-            &:hover {
-                font-size: 28px;
-                color: #7262fd;
-                cursor: pointer;
-                padding: 0;
-            }
-        }
+  }
+
+  .ebook-title-wrapper {
+    width: 65%;
+    height: 100%;
+    padding: 4px 4px 4px 8px;
+    display: flex;
+    align-items: center;
+
+    .ebook-title {
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 20px;
     }
+  }
+
+  .btn-controls-wrapper {
+    flex: 1;
+    height: 100%;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .btn-control {
+      width: 64px;
+      height: 64px;
+      padding: 4px;
+      margin: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: #5B8FF9;
+
+      &:hover {
+        font-size: 28px;
+        color: #7262fd;
+        cursor: pointer;
+        padding: 0;
+      }
+    }
+  }
 }

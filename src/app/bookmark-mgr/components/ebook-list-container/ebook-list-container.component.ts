@@ -1,5 +1,5 @@
-import { GeneralBook } from './../../../entity/general-ebook.entity';
-import { Component, Input, OnInit } from '@angular/core';
+import {GeneralBook} from '../../../core/entity';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-ebook-list-container',
@@ -7,10 +7,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./ebook-list-container.component.scss']
 })
 export class EbookListContainerComponent implements OnInit {
-  
+
   ebookList: Array<GeneralBook> = [];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
     this.ebookList = [...this.ebookList,
@@ -144,7 +145,7 @@ export class EbookListContainerComponent implements OnInit {
         bookSize: '1.78M',
         bookPushedTime: '2021-03-26 15:20:49'
       }
-      ]
+    ]
   }
 
 }

@@ -1,14 +1,14 @@
 .ebook-info-grid-container-wrapper {
-    width: 100%;
-    max-height: 95%;
-    padding: 4px;
-    overflow-y: auto;
-    overflow-x: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 160px);
-    grid-template-rows: repeat(auto-fit, 280px);
-    justify-content: center;
-    justify-items: center;
-    gap: 16px;
+  width: 100%;
+  max-height: 95%;
+  padding: 4px;
+  overflow-y: auto;
+  overflow-x: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 160px);
+  grid-template-rows: repeat(auto-fit, 280px);
+  justify-content: center;
+  justify-items: center;
+  gap: 16px;
 
 }

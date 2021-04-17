@@ -1,5 +1,5 @@
-import { GeneralBookmark } from './../../../entity/general-bookmark.entity';
-import { Component, Input, OnInit } from '@angular/core';
+import {GeneralBookmark} from '../../../core/entity';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-bookmark-list-container',
@@ -10,7 +10,8 @@ export class BookmarkListContainerComponent implements OnInit {
 
   bookmarkList: Array<GeneralBookmark> = [];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
     this.bookmarkList = [

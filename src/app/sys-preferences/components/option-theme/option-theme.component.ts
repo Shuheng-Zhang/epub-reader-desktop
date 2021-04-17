@@ -1,6 +1,5 @@
-import { ThemeOptionDescription } from './../../../enums/theme-option-description.enum';
-import { ThemeOption } from './../../../enums/theme-option.enum';
-import { Component, OnInit } from '@angular/core';
+import {ThemeOption, ThemeOptionDescription} from '../../../core/enums';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-option-theme',
@@ -11,13 +10,14 @@ export class OptionThemeComponent implements OnInit {
 
   themeOptionValue: ThemeOption;
   themeOptionDescription: string;
-  themeOptionList: Array<{label: string, value: ThemeOption}> = [
-    { label: 'Light', value: ThemeOption.THEME_LIGHT },
-    { label: 'Dark', value: ThemeOption.THEME_DARK },
-    { label: 'Mac Auto', value: ThemeOption.THEME_MAC_AUTO }
+  themeOptionList: Array<{ label: string, value: ThemeOption }> = [
+    {label: 'Light', value: ThemeOption.THEME_LIGHT},
+    {label: 'Dark', value: ThemeOption.THEME_DARK},
+    {label: 'Mac Auto', value: ThemeOption.THEME_MAC_AUTO}
   ]
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
     this.themeOptionValue = ThemeOption.THEME_LIGHT;
