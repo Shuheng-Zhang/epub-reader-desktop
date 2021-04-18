@@ -4,7 +4,6 @@ import {PageQueryDto} from "../../core/dto/page-query.dto";
 import {AppConfig} from '../../../environments/environment';
 import {CommResDataDto} from "../../core/dto";
 import {GeneralBook} from "../../core/entity";
-import {Subject} from "rxjs";
 import {PageQueryResultDto} from "../../core/dto/page-query-result.dto";
 
 @Injectable({
@@ -25,11 +24,6 @@ export class GeneralBookService {
    * - queryParams.limit (可选) - 数据集单次容量上限
    */
   fetchBooks(queryParams: PageQueryDto<string>) {
-    let result = new Subject<CommResDataDto<PageQueryResultDto<GeneralBook>>>();
-    this.httpClient.post<CommResDataDto<PageQueryResultDto<GeneralBook>>>(`${AppConfig.apiUrl}/book/list`, queryParams)
-      .subscribe(res => {
-        result.next(res);
-      });
-    return result;
+    return this.httpClient.post<CommResDataDto<PageQueryResultDto<GeneralBook>>>(`${AppConfig.apiUrl}/book/list`, queryParams);
   }
 }
