@@ -3,7 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {PageQueryDto} from "../../core/dto/page-query.dto";
 import {AppConfig} from '../../../environments/environment';
 import {CommResDataDto} from "../../core/dto";
-import {GeneralBook} from "../../core/entity";
+import {GeneralBook, RecentReadingBook} from "../../core/entity";
 import {PageQueryResultDto} from "../../core/dto/page-query-result.dto";
 
 @Injectable({
@@ -25,5 +25,13 @@ export class GeneralBookService {
    */
   fetchBooks(queryParams: PageQueryDto<string>) {
     return this.httpClient.post<CommResDataDto<PageQueryResultDto<GeneralBook>>>(`${AppConfig.apiUrl}/book/list`, queryParams);
+  }
+
+  /**
+   * 查询用户最近阅读信息
+   * @param accountId 用户账号ID
+   */
+  fetchRecentReadingBooks(accountId: string) {
+    return this.httpClient.post<CommResDataDto<Array<RecentReadingBook>>>(`${AppConfig.apiUrl}/book/list/recent`, {accountId: accountId});
   }
 }

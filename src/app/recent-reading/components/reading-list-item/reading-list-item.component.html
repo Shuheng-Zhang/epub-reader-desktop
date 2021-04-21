@@ -5,30 +5,30 @@
   </div>
   <div class="reading-item-content-wrapper">
     <div class="reading-item-title-wrapper">
-      {{ readingBook.ebookTitle }}
+      {{ readingBook.bookTitle }}
     </div>
     <div class="reading-item-author-wrapper">
-      {{ readingBook.ebookAuthors }}
+      {{ readingBook.bookAuthors }}
     </div>
 
     <app-comms-divider></app-comms-divider>
 
     <div class="reading-item-latest-time-wrapper">
-      {{ readingBook.readingLatestTime }}
+      {{ readingBook.latestReadTime }}
     </div>
     <div class="reading-item-process-info-wrapper">
       <div class="reading-item-process-wrapper">
-        {{ readingBook.readingProgress }}%
+        {{ readingBook.progressPercentage }}%
       </div>
       <div class="point-split-wrapper">·</div>
       <div class="reading-item-chapter-wrapper">
-        {{ readingBook.readingChapterTitle }}
+        {{ readingBook.progressTitle }}
       </div>
     </div>
 
 
     <div class="reading-item-operation-wrapper">
-      <button nz-button nzShape="round" nzType="primary" type="button">Continue</button>
+      <button nz-button nzShape="round" nzType="primary" type="button" (click)="onBookOpened()">Continue</button>
     </div>
   </div>
 </div>

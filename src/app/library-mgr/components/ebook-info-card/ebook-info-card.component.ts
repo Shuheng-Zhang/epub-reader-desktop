@@ -43,8 +43,11 @@ export class EbookInfoCardComponent implements OnInit {
     }
 
     console.log(`book: ${bookId} Clicked.`);
-    this.navRouter.navigate(['/', 'epub_reader']).then(() => {
+    /*this.navRouter.navigate(['/', 'epub_reader']).then(() => {
       this.readerCtrlService.currentBookInfo.next(this.bookEntity);
-    });
+    });*/
+    // 打开电子书
+    this.readerCtrlService.onBookOpened(this.bookEntity);
   }
+
 }
