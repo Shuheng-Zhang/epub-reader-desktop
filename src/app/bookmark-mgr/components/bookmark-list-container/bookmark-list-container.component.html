@@ -1,3 +1,8 @@
-<div class="bookmark-list-container-wrapper">
+<div class="bookmark-list-container-wrapper" #bookmarkListContainer
+     infinite-scroll
+     [infiniteScrollDistance]="2"
+     [infiniteScrollThrottle]="50"
+     [scrollWindow]="false"
+     (scrolled)="onLoadingMore()">
   <app-bookmark-list-item *ngFor="let bookmark of bookmarkList" [bookmarkEntity]="bookmark"></app-bookmark-list-item>
 </div>
