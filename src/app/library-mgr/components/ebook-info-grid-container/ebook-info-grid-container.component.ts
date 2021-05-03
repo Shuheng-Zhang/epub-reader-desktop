@@ -1,6 +1,7 @@
 import {GeneralBook} from '../../../core/entity';
 import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {GeneralBookService} from "../../../services/remote";
+import {map} from "rxjs/operators";
 
 @Component({
   selector: 'app-ebook-info-grid-container',
@@ -14,17 +15,17 @@ export class EbookInfoGridContainerComponent implements OnInit, OnDestroy {
   /**
    * 数据页总量
    */
-  pages: number;
+  private pages: number;
 
   /**
    * 每页项目数量
    */
-  itemsPerPage: number;
+  private itemsPerPage: number;
 
   /**
    * 当前页码
    */
-  loadedPage = 1;
+  private loadedPage = 1;
 
   /**
    * 数据总量
@@ -33,9 +34,7 @@ export class EbookInfoGridContainerComponent implements OnInit, OnDestroy {
 
   ebookList: GeneralBook[] = [
     // 默认项, 电子书导入按键
-    {
-      id: null
-    }
+    { id: null }
   ]
 
   constructor(private ebookService: GeneralBookService) {
@@ -77,12 +76,18 @@ export class EbookInfoGridContainerComponent implements OnInit, OnDestroy {
    */
   private fetchBookList(accountId: string, currentPage: number, itemsPerPage = 10) {
     this.ebookService.fetchBooks({currentPage: currentPage, limit: itemsPerPage, requests: {'accountId': accountId}})
-      .subscribe(result => {
-        console.log('fetchBookList', result);
-        this.pages = result.data.pages;
-        this.loadedPage = result.data.current;
-        this.total = result.data.total;
-        this.ebookList = [...this.ebookList, ...result.data.records];
+      .pipe(
+        map(resp => resp.data),
+        map(dataEntity => {
+            this.pages = dataEntity.pages;
+            this.loadedPage = dataEntity.current;
+            this.total = dataEntity.total;
+            return dataEntity.records;
+        })
+      )
+      .subscribe(ebookList => {
+        console.log('fetchBookList', ebookList);
+        this.ebookList = [...this.ebookList, ...ebookList];
       });
   }
 }
