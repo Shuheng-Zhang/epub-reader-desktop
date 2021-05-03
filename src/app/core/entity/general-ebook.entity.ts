@@ -6,5 +6,5 @@ export interface GeneralBook {
   bookCoverUrl?: string,
   bookSize?: string,
   bookPushedTime?: string
-  bookFileUrl?: string
+  bookOpfUrl?: string
 }

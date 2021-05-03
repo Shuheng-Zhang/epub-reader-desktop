@@ -25,7 +25,7 @@ export class ReaderContentContainerComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.ebookInfoSub = this.readerCtrlService.currentBookInfo.subscribe(ebookInfo => {
-      const ebookFilePath = `${AppConfig.baseUrl}${ebookInfo.bookFileUrl}`;
+      const ebookFilePath = `${AppConfig.baseUrl}${ebookInfo.bookOpfUrl}`;
       this.onLoadingBook(ebookFilePath);
     });
   }

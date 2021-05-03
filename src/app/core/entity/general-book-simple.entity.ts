@@ -3,5 +3,5 @@ export interface GeneralBookSimple {
   bookTitle?: string,
   bookAuthors: string,
   bookCoverUrl: string,
-  bookFileUrl: string
+  bookOpfUrl: string
 }
