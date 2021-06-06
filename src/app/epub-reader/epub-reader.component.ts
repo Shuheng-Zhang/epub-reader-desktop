@@ -10,6 +10,9 @@ import {Subscription} from 'rxjs';
 export class EpubReaderComponent implements OnInit, OnDestroy {
   private readerHeaderAndIndicatorCtrlSub: Subscription;
 
+  /**
+   * 标题栏及进度指示器显示状态
+   */
   isHeaderAndIndicatorShown = false;
 
   constructor(private readerCtrlService: ReaderCtrlService) {

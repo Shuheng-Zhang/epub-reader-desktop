@@ -2,13 +2,13 @@
   <div class="btn-back-wrapper cus-side-right-shadow" (click)="onReaderExited()">
     <i class="btn-back" nz-icon nzType="rollback"></i>
   </div>
-  <div class="ebook-title-wrapper cus-side-right-shadow">
+  <div class="ebook-title-wrapper">
     <div class="ebook-title">
       {{ ebookTitle }}
     </div>
   </div>
 
-  <div class="btn-controls-wrapper">
+  <div class="btn-controls-wrapper cus-side-left-shadow">
     <div class="btn-control" nz-tooltip nzTooltipTitle="Contents" nzTooltipPlacement="bottom"
          (click)="onContentsPanelOpened()">
       <i nz-icon nzType="unordered-list"></i>
@@ -17,10 +17,12 @@
          (click)="onBookmarksPanelOpened()">
       <i nz-icon nzType="book"></i>
     </div>
+<!--
     <div class="btn-control" nz-tooltip nzTooltipTitle="Notes" nzTooltipPlacement="bottom"
          (click)="onNotesPanelOpened()">
       <i nz-icon nzType="select"></i>
     </div>
+-->
     <div class="btn-control" nz-tooltip nzTooltipTitle="Font" nzTooltipPlacement="bottom" (click)="onFontPanelOpened()">
       <i nz-icon nzType="font-size"></i>
     </div>

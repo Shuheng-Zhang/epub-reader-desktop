@@ -29,28 +29,28 @@
   </div>
 </div>
 
-<ng-template #titleTemplate><i nz-icon nzType="info-circle"></i> Info</ng-template>
+<ng-template #titleTemplate><i nz-icon nzType="info-circle"></i> Book Overview</ng-template>
 <ng-template #contentTemplate>
   <div class="ebook-info-detail-wrapper">
-    <div class="ebook-info-detail-title-wrapper">
+    <div class="ebook-info-detail-info-wrapper">
       <span class="info-title">Title: </span>
-      <span> {{ bookEntity.bookTitle }} </span>
+      <span class="info-content"> {{ bookEntity.bookTitle }} </span>
     </div>
-    <div class="ebook-info-detail-authors-wrapper">
+    <div class="ebook-info-detail-info-wrapper">
       <span class="info-title">Authors: </span>
-      <span> {{ bookEntity.bookAuthors }} </span>
+      <span class="info-content"> {{ bookEntity.bookAuthors }} </span>
     </div>
-    <div class="ebook-info-detail-size-wrapper">
+    <div class="ebook-info-detail-info-wrapper">
       <span class="info-title">Size: </span>
-      <span> {{ bookEntity.bookSize }} </span>
+      <span class="info-content"> {{ bookEntity.bookSize }} </span>
     </div>
-    <div class="ebook-info-detail-pushed-time-wrapper">
+    <div class="ebook-info-detail-info-wrapper">
       <span class="info-title">PushedTime: </span>
-      <span>{{ bookEntity.bookPushedTime}}</span>
+      <span class="info-content">{{ bookEntity.bookPushedTime}}</span>
     </div>
-    <div class="ebook-detail-descrpiton-wrapper">
-      <span class="info-title">Discription: </span>
-      <span> {{ bookEntity.bookDescription }}</span>
+    <div class="ebook-info-detail-info-wrapper">
+      <span class="info-title">Description: </span>
+      <span class="info-content"> {{ bookEntity.bookDescription }}</span>
     </div>
   </div>
 

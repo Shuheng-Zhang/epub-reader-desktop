@@ -1,6 +1,6 @@
-import {GeneralBook, GeneralBookSimple} from '../../../core/entity';
 import {Component, Input, OnInit} from '@angular/core';
 import {AppConfig} from '../../../../environments/environment';
+import {GeneralBookSimpleDto} from "../../../core/dto";
 
 @Component({
   selector: 'app-ebook-list-item',
@@ -9,7 +9,7 @@ import {AppConfig} from '../../../../environments/environment';
 })
 export class EbookListItemComponent implements OnInit {
 
-  @Input() ebookEntity: GeneralBookSimple;
+  @Input() ebookEntity: GeneralBookSimpleDto;
   @Input() ebookItemTabIndex: number;
   ebookCover: string;
   ebookTitle: string;

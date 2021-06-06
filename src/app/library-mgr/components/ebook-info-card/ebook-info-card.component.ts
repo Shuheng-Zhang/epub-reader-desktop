@@ -1,8 +1,8 @@
-import {GeneralBook} from '../../../core/entity';
 import {Component, Input, OnInit} from '@angular/core';
 import {AppConfig} from '../../../../environments/environment';
 import {Router} from "@angular/router";
 import {ReaderCtrlService} from "../../../services/local";
+import {GeneralBookDto} from "../../../core/dto";
 
 
 @Component({
@@ -12,7 +12,7 @@ import {ReaderCtrlService} from "../../../services/local";
 })
 export class EbookInfoCardComponent implements OnInit {
 
-  @Input() bookEntity: GeneralBook;
+  @Input() bookEntity: GeneralBookDto;
 
   ebookCoverUrl: string = null;
   isCoverNull = false;

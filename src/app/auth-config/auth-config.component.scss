@@ -1,0 +1,73 @@
+/*
+.auth-config-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .auth-icon-wrapper {
+    width: 60%;
+    height: 128px;
+    padding: 4px;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .auth-icon {
+      margin: 0 4px;
+      font-size: 64px;
+      color: #5B8FF9;
+    }
+    .auth-title-wrapper {
+      font-size: 36px;
+      margin: 0 4px;
+    }
+  }
+  .account-info-wrapper, .btn-confirm-wrapper {
+    width: 64%;
+    padding: 4px;
+    margin: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .account-username-wrapper, .account-password-wrapper, .api-server-wrapper {
+      width: 100%;
+      display: flex;
+      padding: 4px;
+      align-items: center;
+      .input-wrapper {
+        flex: 1;
+        height: 100%;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        .info-input {
+          width: 100%;
+          height: 100%;
+          border: none;
+          font-size: 16px;
+          &:focus {
+            outline: none;
+          }
+          &::-webkit-input-placeholder {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .btn-confirm-wrapper {
+    width: 60%;
+    height: 64px;
+    padding: 4px;
+    .btn-ok {
+      width: 100%;
+      height: 100%;
+      font-size: 14px;
+    }
+  }
+}
+*/

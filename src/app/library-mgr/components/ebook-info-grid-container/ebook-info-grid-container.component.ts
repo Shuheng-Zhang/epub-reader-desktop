@@ -1,7 +1,7 @@
-import {GeneralBook} from '../../../core/entity';
 import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {GeneralBookService} from "../../../services/remote";
 import {map} from "rxjs/operators";
+import {GeneralBookDto} from "../../../core/dto";
 
 @Component({
   selector: 'app-ebook-info-grid-container',
@@ -32,7 +32,7 @@ export class EbookInfoGridContainerComponent implements OnInit, OnDestroy {
    */
   total: number;
 
-  ebookList: GeneralBook[] = [
+  ebookList: GeneralBookDto[] = [
     // 默认项, 电子书导入按键
     { id: null }
   ]

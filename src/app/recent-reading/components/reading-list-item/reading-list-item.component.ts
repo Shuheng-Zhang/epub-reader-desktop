@@ -3,6 +3,7 @@ import {AppConfig} from '../../../../environments/environment';
 
 import {Component, Input, OnInit} from '@angular/core';
 import {ReaderCtrlService} from "../../../services/local";
+import {GeneralBookDto} from "../../../core/dto";
 
 @Component({
   selector: 'app-reading-list-item',
@@ -11,7 +12,7 @@ import {ReaderCtrlService} from "../../../services/local";
 })
 export class ReadingListItemComponent implements OnInit {
 
-  @Input() readingBook: RecentReadingBook;
+  @Input() readingBook: GeneralBookDto;
 
   ebookCover: string;
   hasBookCover = true;

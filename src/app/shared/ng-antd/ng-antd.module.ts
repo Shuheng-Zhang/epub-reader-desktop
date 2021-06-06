@@ -17,8 +17,7 @@ import {NzSelectModule} from 'ng-zorro-antd/select';
 import {NzEmptyModule} from 'ng-zorro-antd/empty';
 import {NzSliderModule} from 'ng-zorro-antd/slider';
 import {NzToolTipModule} from 'ng-zorro-antd/tooltip';
-
-;
+import {NzFormModule} from 'ng-zorro-antd/form';
 
 
 const antDesignIcons = AllIcons as {
@@ -42,7 +41,8 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
     NzSelectModule,
     NzEmptyModule,
     NzSliderModule,
-    NzToolTipModule
+    NzToolTipModule,
+    NzFormModule
   ],
   exports: [
     NzIconModule,
@@ -57,7 +57,8 @@ const icons: IconDefinition[] = Object.keys(antDesignIcons).map(key => antDesign
     NzSelectModule,
     NzEmptyModule,
     NzSliderModule,
-    NzToolTipModule
+    NzToolTipModule,
+    NzFormModule
   ]
 })
 export class NgAntdModule {

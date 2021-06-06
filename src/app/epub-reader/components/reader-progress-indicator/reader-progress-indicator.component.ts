@@ -7,7 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ReaderProgressIndicatorComponent implements OnInit {
 
-  currentChapterTitle = 'Indexing...';
+  currentChapterTitle = 'Analysing...';
   readingProgress: number;
 
   constructor() {

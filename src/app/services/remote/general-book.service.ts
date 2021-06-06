@@ -1,9 +1,9 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {PageQueryDto} from "../../core/dto";
+import {GeneralBookDto, GeneralBookSimpleDto, PageQueryDto} from "../../core/dto";
 import {AppConfig} from '../../../environments/environment';
 import {CommResDataDto} from "../../core/dto";
-import {GeneralBook, GeneralBookSimple, RecentReadingBook} from "../../core/entity";
+import {GeneralBookSimple, RecentReadingBook} from "../../core/entity";
 import {PageQueryResultDto} from "../../core/dto";
 
 @Injectable({
@@ -19,12 +19,34 @@ export class GeneralBookService {
    *
    * - queryParams.requests.accountId (必要) - 用户账号ID
    *
+   * - queryParams.requests.title (可选) - 标题查询
+   *
+   * - queryParams.requests.authors (可选) - 作者查询
+   *
    * - queryParams.currentPage (可选) - 目标页码
    *
    * - queryParams.limit (可选) - 数据集单次容量上限
    */
   fetchBooks(queryParams: PageQueryDto<string>) {
-    return this.httpClient.post<CommResDataDto<PageQueryResultDto<GeneralBook>>>(`${AppConfig.apiUrl}/book/list`, queryParams);
+    return this.httpClient.post<CommResDataDto<PageQueryResultDto<GeneralBookDto>>>(`${AppConfig.apiUrl}/book/list`, queryParams);
+  }
+
+  /**
+   * 查询电子书简易信息列表
+   * @param queryParams 查询条件
+   *
+   * - queryParams.requests.accountId (必要) - 用户账号ID
+   *
+   * - queryParams.requests.title (可选) - 标题查询
+   *
+   * - queryParams.requests.authors (可选) - 作者查询
+   *
+   * - queryParams.currentPage (可选) - 目标页码
+   *
+   * - queryParams.limit (可选) - 数据集单次容量上限
+   */
+  fetchBooksSimple(queryParams: PageQueryDto<string>) {
+    return this.httpClient.post<CommResDataDto<PageQueryResultDto<GeneralBookSimpleDto>>>(`${AppConfig.apiUrl}/book/list_simple`, queryParams);
   }
 
   /**

@@ -31,7 +31,7 @@ export class BookmarkListContainerComponent implements OnInit {
       this.loadedPage = 1;
 
       this.bookId = params['ebookId'];
-      this.itemsPerPage = Number.parseInt((this.bookmarkListContainer.nativeElement.clientHeight / 200).toFixed(0));
+      this.itemsPerPage = Number.parseInt((this.bookmarkListContainer.nativeElement.clientHeight / 200).toFixed(0)) + 1;
 
       this.fetchBookmarks(this.bookId, this.loadedPage, this.itemsPerPage);
     });

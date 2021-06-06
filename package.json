@@ -41,6 +41,7 @@
     "@angular/cdk": "11.2.7",
     "epubjs": "0.3.88",
     "ng-zorro-antd": "11.3.0",
+    "ngx-indexed-db": "6.1.2",
     "ngx-infinite-scroll": "10.0.1",
     "primeicons": "4.1.0",
     "primeng": "11.3.1"

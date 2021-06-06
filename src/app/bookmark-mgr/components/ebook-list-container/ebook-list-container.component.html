@@ -1,4 +1,9 @@
-<div class="ebook-list-container-wrapper  cus-side-right-shadow" #ebookListContainer>
+<div class="ebook-list-container-wrapper  cus-side-right-shadow"
+     infinite-scroll
+     [infiniteScrollDistance]="2"
+     [infiniteScrollThrottle]="50"
+     [scrollWindow]="false" (scrolled)="onLoadingMore()"
+     #ebookListContainer>
   <app-ebook-list-item *ngFor="let ebook of ebookList; let i = index" [ebookItemTabIndex]="i"
                        [ebookEntity]="ebook"></app-ebook-list-item>
 </div>

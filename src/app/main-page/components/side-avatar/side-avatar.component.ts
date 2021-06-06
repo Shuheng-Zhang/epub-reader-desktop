@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {AppDbService} from "../../../services/local";
 
 @Component({
   selector: 'app-side-avatar',
@@ -10,12 +11,16 @@ export class SideAvatarComponent implements OnInit {
   @Input() avatarWidth = '240px';
   @Input() avatarHeight = '240px';
 
-  @Input() accountName = 'Hello World'
+  accountName = 'Hello World';
 
-  constructor() {
+  constructor(private dbService: AppDbService) {
   }
 
   ngOnInit(): void {
+    /*this.dbService.getAppAccountInfo().subscribe(account => {
+      console.log('accountInfo', account);
+      this.accountName = account[0].userName;
+    });*/
   }
 
 }
